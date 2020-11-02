@@ -10,34 +10,40 @@ This algorithm generates QC plots and outputs the first predefined number of Log
 
 The following parameters are available:
 
-- -c/--covFile*: Coverage matrix file produced by ConstructASCATFiles
-- -b/--bafFile*: BAF matrix file produced by ConstructASCATFiles
-- -o/--outputDir*: Output directory
-- -i/--is_control*: Comma-separated list indicating which samples should be considered normal (use 0 or 1, e.g. 0,0,1)
-- -m/--is_male*: Comma-separated indictor to accurately detect chromosome X aberrations (use 0 or 1)
-- -d/--individual_index*: Comma-separated numeric indicator to group samples of the same individual (e.g., 1,1,2,2,2,3,3)
-- -l/--is_baf_control*: Indicator to highlight which samples should be considered germline controls (e.g., 0,0,1,0,1)
-- -p/--prcomp: How many PCs to include in the QC analysis
-- -mc/--min_coverage: The minimal coverage required to be considered present in the controls
-- -ms/--min_samples: The minimum number of controls that have sufficient coverage for the SNP to be included
-- -g/--genome: UCSC source genome name (e.g., hg19 or hg38)
-- -t/--threads: Number of threads
-- -h/--help: Help
-*Required
+Parameter | Description
+--- | ---
+-c/--covFile* | Coverage matrix file produced by ConstructASCATFiles
+-b/--bafFile* | BAF matrix file produced by ConstructASCATFiles
+-o/--outputDir* | Output directory
+-i/--is_control* | Comma-separated list indicating which samples should be considered normal (use 0 or 1, e.g. 0,0,1)
+-m/--is_male* | Comma-separated indictor to accurately detect chromosome X aberrations (use 0 or 1)
+-d/--individual_index* | Comma-separated numeric indicator to group samples of the same individual (e.g., 1,1,2,2,2,3,3)
+-l/--is_baf_control* | Indicator to highlight which samples should be considered germline controls (e.g., 0,0,1,0,1)
+-p/--prcomp | How many PCs to include in the QC analysis
+-mc/--min_coverage | The minimal coverage required to be considered present in the controls
+-ms/--min_samples | The minimum number of controls that have sufficient coverage for the SNP to be included
+-g/--genome | UCSC source genome name (e.g., hg19 or hg38)
+-t/--threads | Number of threads
+-h/--help | Help
+\* | Required
 
 ### construct_ASCAT_files.R
 
 This algorithm constructs normalised LogR and BAF files following multi-faceted correction and principal component regression.
 
-- -c/--covFile*: Coverage matrix file produced by ConstructASCATFiles
-- -b/--bafFile*: BAF matrix file produced by ConstructASCATFiles
-- -o/--outputDir*: Output directory
-- -i/--is_control*: Comma-separated list indicating which samples should be considered normal (use 0 or 1, e.g. 0,0,1)
-- -m/--is_male*: Comma-separated indictor to accurately detect chromosome X aberrations (use 0 or 1)
-- -d/--individual_index*: Comma-separated numeric indicator to group samples of the same individual (e.g., 1,1,2,2,2,3,3)
-- -l/--is_baf_control*: Indicator to highlight which samples should be considered germline controls (e.g., 0,0,1,0,1)
-- -p/--prcomp: How many PCs to include in the QC analysis
-- -mc/--min_coverage: The minimal coverage required to be considered present in the controls
-- -ms/--min_samples: The minimum number of controls that have sufficient coverage for the SNP to be included
-- -t/--threads: Number of threads
-- -h/--help: Help
+Parameter | Description
+--- | ---
+-c/--covFile* | Coverage matrix file produced by ConstructASCATFiles
+-b/--bafFile* | BAF matrix file produced by ConstructASCATFiles
+-o/--outputDir* | Output directory
+-i/--is_control* | Comma-separated list indicating which samples should be considered normal (use 0 or 1, e.g. 0,0,1)
+-m/--is_male* | Comma-separated indictor to accurately detect chromosome X aberrations (use 0 or 1)
+-d/--individual_index* | Comma-separated numeric indicator to group samples of the same individual (e.g., 1,1,2,2,2,3,3)
+-l/--is_baf_control* | Indicator to highlight which samples should be considered germline controls (e.g., 0,0,1,0,1)
+-p/--prcomp | How many PCs to include in the QC analysis
+-mc/--min_coverage | The minimal coverage required to be considered present in the controls
+-ms/--min_samples | The minimum number of controls that have sufficient coverage for the SNP to be included
+-g/--genome | UCSC source genome name (e.g., hg19 or hg38)
+-t/--threads | Number of threads
+-h/--help | Help
+\* | Required
